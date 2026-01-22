@@ -29,6 +29,39 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: 'SimpleScripting',
+					items: [
+						{ label: 'Overview', slug: 'simplescripting/overview' },
+						{ label: 'Introduction', slug: 'simplescripting/introduction' },
+						{
+							label: 'Getting Started',
+							collapsed: false,
+							items: [
+								{ label: 'Installation', slug: 'simplescripting/getting-started/installation' },
+								{ label: 'Folder Structure', slug: 'simplescripting/getting-started/folder-structure' },
+							]
+						},
+						{
+							label: 'Mod Development',
+							collapsed: false,
+							items: [
+								{ label: 'Mod Layout', slug: 'simplescripting/mod-development/mod-layout' },
+								{ label: 'Manifest', slug: 'simplescripting/mod-development/manifest' },
+								{ label: 'Lifecycle', slug: 'simplescripting/mod-development/lifecycle' },
+								{ label: 'Dependencies and Order', slug: 'simplescripting/mod-development/dependencies-and-order' },
+							]
+						},
+						{
+							label: 'Interop',
+							collapsed: false,
+							items: [
+								{ label: 'Shared Services', slug: 'simplescripting/interop/shared-services' },
+							]
+						},
+						{ label: 'limitations', slug: 'simplescripting/limitations' },
+					]
+				}
 			],
 		}),
 	],
