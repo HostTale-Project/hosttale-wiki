@@ -53,6 +53,19 @@ export default defineConfig({
 							]
 						},
 						{
+							label: 'Runtime API',
+							collapsed: false,
+							items: [
+								{ label: 'API Overview', slug: 'simplescripting/api/overview' },
+								{ label: 'Events & Commands', slug: 'simplescripting/api/events-and-commands' },
+								{ label: 'Players & Worlds', slug: 'simplescripting/api/players-and-worlds' },
+								{ label: 'Server, Net & Assets', slug: 'simplescripting/api/server-net-and-assets' },
+								{ label: 'UI & Messages', slug: 'simplescripting/api/ui-and-messages' },
+								{ label: 'Modules & Shared Services', slug: 'simplescripting/api/modules-and-shared-services' },
+								{ label: 'Database', slug: 'simplescripting/api/database' },
+							],
+						},
+						{
 							label: 'Interop',
 							collapsed: false,
 							items: [
