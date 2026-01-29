@@ -23,6 +23,12 @@ SimpleScripting provides:
 - A mod loader and lifecycle manager for JavaScript-based mods
 - A safe interoperability layer between JavaScript mods
 
+## JavaScript Runtime API
+
+SimpleScripting wraps native Hytale classes with safe JavaScript facades for events, commands, players, worlds, tasks, networking, UI, module loading, shared services, and per-mod databases. If you need deeper native behavior, extend these wrappers in Java instead of passing raw objects into scripts.
+
+See the [API Overview](./api/overview) for the full surface and examples.
+
 ## What SimpleScripting Is Not
 
 :::caution

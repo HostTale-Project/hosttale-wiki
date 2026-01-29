@@ -3,7 +3,12 @@ title: Shared Services
 description: Learn how to expose and consume cross-mod APIs using the Shared Services system.
 ---
 
-Shared Services allow mods to expose and consume APIs in a controlled way.
+Shared Services let mods share plain JavaScript APIs without ever handing raw Java objects to other mods.
+
+## API surface
+
+- `SharedServices.expose(name, apiObject)` — register a service.
+- `SharedServices.call(serviceName, methodName, args?)` — invoke another mod's service method.
 
 ## Exposing a Service
 
@@ -16,9 +21,9 @@ SharedServices.expose("greetings", {
 ```
 
 :::note[Service Registration]
-- Service names are global
-- First registration wins
-- Duplicate names are rejected
+- Service names are global.
+- First registration wins; duplicates are rejected.
+- Exposed values should be plain JS objects, not native handles.
 :::
 
 ## Consuming a Service
@@ -32,12 +37,13 @@ var result = SharedServices.call(
 ```
 
 :::caution
-- Provider must be loaded first
-- Consumers should declare dependencies
+- Provider must be loaded first.
+- Consumers should declare dependencies to guarantee load order.
 :::
 
-## Service Lifecycle
+## Service Lifecycle & Safety
 
-- Services are cleared on reload or disable
-- Calls to missing services fail
-- Services cannot outlive their owning mod
+- Services are cleared on reload or disable.
+- Calls to missing services fail fast; handle absent providers gracefully.
+- Services cannot outlive their owning mod.
+- Keep APIs narrow and stable to avoid breaking consumers.
