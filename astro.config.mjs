@@ -27,6 +27,17 @@ export default defineConfig({
 								{ label: 'Troubleshooting', slug: 'guides/ui/troubleshooting' },
 							],
 						},
+						{
+							label: 'ECS (Native)',
+							collapsed: false,
+							items: [
+								{ label: 'Overview', slug: 'guides/ecs/overview' },
+								{ label: 'Registry & Runtime Objects', slug: 'guides/ecs/registry-and-runtime-objects' },
+								{ label: 'Systems & Queries', slug: 'guides/ecs/systems-and-queries' },
+								{ label: 'Components & Events', slug: 'guides/ecs/components-and-events' },
+								{ label: 'Serialization & Resources', slug: 'guides/ecs/serialization-and-resources' },
+							],
+						},
 					],
 				},
 				{
@@ -63,6 +74,18 @@ export default defineConfig({
 								{ label: 'UI & Messages', slug: 'simplescripting/api/ui-and-messages' },
 								{ label: 'Modules & Shared Services', slug: 'simplescripting/api/modules-and-shared-services' },
 								{ label: 'Database', slug: 'simplescripting/api/database' },
+							],
+						},
+						{
+							label: 'ECS',
+							collapsed: false,
+							items: [
+								{ label: 'ECS Overview', slug: 'simplescripting/ecs/overview' },
+								{ label: 'Components & Queries', slug: 'simplescripting/ecs/components-and-queries' },
+								{ label: 'Systems & Events', slug: 'simplescripting/ecs/systems-and-events' },
+								{ label: 'ECS API Reference', slug: 'simplescripting/ecs/api-reference' },
+								{ label: 'Spatial, Motion & Damage', slug: 'simplescripting/ecs/spatial-and-helpers' },
+								{ label: 'ECS Recipes', slug: 'simplescripting/ecs/recipes' },
 							],
 						},
 						{
