@@ -15,6 +15,30 @@ Wraps `HytaleServer` and `TaskRegistry`.
 - `server.isBooted()` → boolean
 - `server.name()` → server name
 
+### Run Console Commands
+
+- `server.runCommand(commandLine)` — executes any server command as the **console sender** (full permissions).  
+  - Throws `IllegalArgumentException` for empty input.  
+  - Throws `IllegalStateException` if the command cannot be executed.  
+  - Runs on the calling thread; target commands may still perform async work.
+
+**Usage guidelines**
+- Validate user input before concatenating into `commandLine` to avoid unintended commands.
+- Because it runs as console, add your own permission checks when exposing this to players.
+- Expect delayed feedback if the target command is async.
+
+**Examples**
+```js
+// Reload another plugin
+server.runCommand("pluginmanager:reload MyPlugin");
+
+// Give items using an existing command
+server.runCommand(`give Alice diamond 64`);
+
+// Trigger a world save
+server.runCommand("save-all");
+```
+
 ### Example
 
 ```javascript
