@@ -24,6 +24,7 @@ Each wrapper sits on top of a native system:
 - `require` → module loader for `.js` files inside a mod
 - `SharedServices` → cross-mod API bridge
 - `db` → SQLite database per mod under the SimpleScripting data folder
+- `economy` → unified economy API supporting VaultUnlocked and EliteEssentials
 
 ## Reading the API docs
 
@@ -35,6 +36,7 @@ Each API page lists the wrapper methods, their native counterpart, and usage exa
 - [UI & Messages](./ui-and-messages)
 - [Modules & Shared Services](./modules-and-shared-services)
 - [Database](./database)
+- [Economy](./economy)
 - [Example Packs](./examples)
 
 You can mix these surfaces freely within a mod. All messaging methods accept plain strings or the `ui` builders documented below.
