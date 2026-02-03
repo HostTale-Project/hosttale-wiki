@@ -1,0 +1,26 @@
+# Robots.txt for HostTale Documentation
+# Optimized for both traditional search engines and AI agents
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+
+# Specific rules for AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+# Sitemap location
+Sitemap: https://wiki.hosttale.com/sitemap-index.xml

@@ -1,6 +1,6 @@
 ---
-title: Commands
-description: Learn how to create custom commands for your Hytale server plugins.
+title: Creating Custom Commands for Hytale Servers - Complete Guide
+description: Learn how to create powerful custom commands for your Hytale server plugins with type-safe arguments, permission handling, and async execution. Includes examples and best practices for command development.
 ---
 
 Commands are the primary way players and administrators interact with your server plugins. This guide covers everything you need to know to create powerful, type-safe commands.

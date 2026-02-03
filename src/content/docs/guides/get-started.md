@@ -1,6 +1,6 @@
 ---
-title: Get started
-description: Writing your first Hytale mod.
+title: Get Started with Hytale Plugin Development - Complete Setup Guide
+description: Step-by-step guide to creating your first Hytale server plugin. Learn how to set up your development environment, download the template, and build your first mod with Java 25 and IntelliJ IDEA.
 ---
 
 Ready to create your first Hytale server plugin? This guide will help you set up a new mod project that works seamlessly across all operating systems.
@@ -120,3 +120,14 @@ To test it manually, copy the JAR to `%appdata%/Hytale/UserData/Mods/` (Windows)
 ## Next Steps
 
 You're now ready to start building! Explore the code structure, experiment with the example command, and begin implementing your ideas. Check out the rest of our documentation to learn about creating commands, handling events, and more advanced plugin development techniques.
+
+## Related Documentation
+
+- [Commands Guide](/guides/commands) - Learn how to create custom commands for your plugin
+- [Custom UI Overview](/guides/ui/overview) - Build interactive user interfaces
+- [ECS Overview](/guides/ecs/overview) - Understanding Hytale's Entity Component System
+- [SimpleScripting](/simplescripting/overview) - Write mods using JavaScript instead of Java
+
+---
+
+*Last updated: February 2026*

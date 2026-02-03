@@ -49,4 +49,23 @@ New to Hytale modding? Start here to learn the concepts before diving into code.
 - Scheduling logic on a per-tick or delayed cadence.
 - Storing mod data in a way the engine can serialize and replicate.
 
+## Next Steps
+
+Dive deeper into ECS development:
+
+- [Registry & Runtime Objects](/guides/ecs/registry-and-runtime-objects) - Learn about ComponentRegistry and Store
+- [Systems & Queries](/guides/ecs/systems-and-queries) - Build and register systems
+- [Components & Events](/guides/ecs/components-and-events) - Define custom components and events
+- [Serialization & Resources](/guides/ecs/serialization-and-resources) - Persist and manage data
+
+## Related Documentation
+
+- [Get Started](/guides/get-started) - Set up your development environment
+- [ECS for SimpleScripting](/simplescripting/ecs/overview) - Use ECS with JavaScript
+- [Commands Guide](/guides/commands) - Create commands that interact with ECS
+
+---
+
+*Last updated: February 2026*
+
 Next up: learn the runtime objects that make these pieces work in `Registry & Runtime Objects`.
