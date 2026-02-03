@@ -1,6 +1,6 @@
 ---
-title: SimpleScripting Overview
-description: A server-side scripting framework for Hytale that enables JavaScript-based mod development.
+title: SimpleScripting for Hytale - JavaScript Mod Development Framework
+description: A comprehensive server-side scripting framework for Hytale that enables JavaScript-based mod development. Build Hytale mods with familiar JavaScript syntax and a powerful runtime API.
 ---
 
 :::danger[Pre-Release Version]
@@ -52,3 +52,24 @@ SimpleScripting is not:
 :::note[Documentation Scope]
 This documentation covers only implemented functionality. Future features will be documented once finalized and released.
 :::
+
+## Getting Started with SimpleScripting
+
+Ready to start building JavaScript mods?
+
+1. [Installation Guide](/simplescripting/getting-started/installation) - Set up SimpleScripting on your server
+2. [Folder Structure](/simplescripting/getting-started/folder-structure) - Understand the mod directory layout
+3. [Mod Layout](/simplescripting/mod-development/mod-layout) - Learn the structure of a JavaScript mod
+4. [API Overview](/simplescripting/api/overview) - Explore the runtime API
+
+## Related Documentation
+
+- [JavaScript API Overview](/simplescripting/api/overview) - Complete API reference
+- [Events & Commands](/simplescripting/api/events-and-commands) - Handle game events and create commands
+- [Database API](/simplescripting/api/database) - Persist data with SQLite
+- [ECS for SimpleScripting](/simplescripting/ecs/overview) - Work with the Entity Component System
+- [Current Limitations](/simplescripting/limitations) - Understand design constraints
+
+---
+
+*Last updated: February 2026*

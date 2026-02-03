@@ -1,12 +1,74 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://wiki.hosttale.com',
 	integrations: [
+		sitemap({
+			changefreq: 'weekly',
+			priority: 0.7,
+			lastmod: new Date(),
+		}),
 		starlight({
 			title: 'HostTale',
+			description: 'Comprehensive documentation for Hytale server plugin development. Learn to create custom mods, commands, UI, and ECS systems for Hytale servers.',
+			favicon: '/favicon.svg',
+			head: [
+				// Enhanced SEO and OpenGraph meta tags
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:type',
+						content: 'website',
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:locale',
+						content: 'en_US',
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'twitter:card',
+						content: 'summary_large_image',
+					},
+				},
+				// Schema.org structured data for Agentic SEO
+				{
+					tag: 'script',
+					attrs: {
+						type: 'application/ld+json',
+					},
+					content: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'TechArticle',
+						'name': 'HostTale Documentation',
+						'description': 'Comprehensive documentation for Hytale server plugin development',
+						'about': {
+							'@type': 'SoftwareApplication',
+							'name': 'HostTale',
+							'applicationCategory': 'DeveloperApplication',
+							'operatingSystem': 'Cross-platform',
+							'offers': {
+								'@type': 'Offer',
+								'price': '0',
+								'priceCurrency': 'USD',
+							}
+						},
+						'audience': {
+							'@type': 'Audience',
+							'audienceType': 'Developers'
+						},
+						'inLanguage': 'en-US',
+					}),
+				},
+			],
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/HostTale-Project/hosttale-wiki' }],
 			sidebar: [
 				{
@@ -16,6 +78,7 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Get started', slug: 'guides/get-started' },
 						{ label: 'Commands', slug: 'guides/commands'},
+						{ label: 'FAQ', slug: 'guides/faq'},
 						{
 							label: 'Custom UI',
 							collapsed: false,
@@ -25,8 +88,7 @@ export default defineConfig({
 								{ label: 'UI Files', slug: 'guides/ui/ui-files' },
 								{ label: 'Interactive Pages', slug: 'guides/ui/interactive-pages' },
 								{ label: 'BuilderCodec', slug: 'guides/ui/builder-codec' },
-								{ label: 'Troubleshooting', slug: 'guides/ui/troubleshooting' },
-							],
+								{ label: 'Troubleshooting', slug: 'guides/ui/troubleshooting' },							{ label: 'FAQ', slug: 'guides/ui/faq' },							],
 						},
 						{
 							label: 'ECS',
@@ -36,8 +98,7 @@ export default defineConfig({
 								{ label: 'Registry & Runtime Objects', slug: 'guides/ecs/registry-and-runtime-objects' },
 								{ label: 'Systems & Queries', slug: 'guides/ecs/systems-and-queries' },
 								{ label: 'Components & Events', slug: 'guides/ecs/components-and-events' },
-								{ label: 'Serialization & Resources', slug: 'guides/ecs/serialization-and-resources' },
-							],
+								{ label: 'Serialization & Resources', slug: 'guides/ecs/serialization-and-resources' },							{ label: 'FAQ', slug: 'guides/ecs/faq' },							],
 						},
 					],
 				},
@@ -46,13 +107,13 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', slug: 'simplescripting/overview' },
 						{ label: 'Introduction', slug: 'simplescripting/introduction' },
+						{ label: 'FAQ', slug: 'simplescripting/faq' },
 						{
 							label: 'Getting Started',
 							collapsed: false,
 							items: [
 								{ label: 'Installation', slug: 'simplescripting/getting-started/installation' },
-								{ label: 'Folder Structure', slug: 'simplescripting/getting-started/folder-structure' },
-							]
+								{ label: 'Folder Structure', slug: 'simplescripting/getting-started/folder-structure' },							{ label: 'FAQ', slug: 'simplescripting/getting-started/faq' },							]
 						},
 						{
 							label: 'Mod Development',
