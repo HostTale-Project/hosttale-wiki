@@ -11,6 +11,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Guides',
+					collapsed: true,
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Get started', slug: 'guides/get-started' },
@@ -28,7 +29,7 @@ export default defineConfig({
 							],
 						},
 						{
-							label: 'ECS (Native)',
+							label: 'ECS',
 							collapsed: false,
 							items: [
 								{ label: 'Overview', slug: 'guides/ecs/overview' },
@@ -74,6 +75,7 @@ export default defineConfig({
 								{ label: 'UI & Messages', slug: 'simplescripting/api/ui-and-messages' },
 								{ label: 'Modules & Shared Services', slug: 'simplescripting/api/modules-and-shared-services' },
 								{ label: 'Database', slug: 'simplescripting/api/database' },
+								{ label: 'Economy', slug: 'simplescripting/api/economy' },
 							],
 						},
 						{
