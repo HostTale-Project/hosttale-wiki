@@ -308,7 +308,8 @@ Yes! Update the `version` field in `mod.json` when you make changes:
 Start with:
 1. [API Overview](/simplescripting/api/overview) - Surface area
 2. [Events & Commands](/simplescripting/api/events-and-commands) - Basic functionality
-3. [Database](/simplescripting/api/database) - Data persistence
+3. [Inventory & Items](/simplescripting/api/inventory-and-items) - ItemStacks and inventory planning
+4. [Database](/simplescripting/api/database) - Data persistence
 
 ### What should my first mod do?
 

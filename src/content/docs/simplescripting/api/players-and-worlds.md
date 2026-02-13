@@ -51,6 +51,7 @@ Wraps the native `World` class.
 - `worlds.getDefaultWorld()` → `WorldHandle | null`
 - `worlds.message(worldName, text)` → send to one world
 - `worlds.hasWorld(name)` → boolean
+- `worlds.runOnWorldThread(worldName, callback)` → execute callback on world thread (required for ECS operations)
 
 ### `WorldHandle` surface
 
@@ -67,4 +68,33 @@ var world = worlds.getDefaultWorld();
 if (world) {
   world.sendMessage("A new dawn rises over " + world.getName());
 }
+
+// Execute ECS operations safely from scheduler threads
+server.runRepeating(30000, function() {
+  worlds.runOnWorldThread(null, function() {
+    var onlinePlayers = players.all();
+    onlinePlayers.forEach(function(player) {
+      var pos = ecs.getPosition(player.getId());
+      console.log(player.getUsername() + " at " + pos.x + ", " + pos.y + ", " + pos.z);
+    });
+  });
+});
+```
+
+## Thread Safety
+
+**Important**: ECS operations like `ecs.getPosition()`, `ecs.teleport()`, etc. must run on the **world thread**. Scheduler callbacks (`server.runRepeating`, `server.runLater`) execute on a separate thread, so wrap ECS calls in `worlds.runOnWorldThread()`:
+
+```javascript
+// Not supported: WRONG - will throw IllegalStateException
+server.runRepeating(5000, function() {
+  var pos = ecs.getPosition(entityId); // Crashes!
+});
+
+// ✅ CORRECT - wrapped in world thread
+server.runRepeating(5000, function() {
+  worlds.runOnWorldThread(null, function() {
+    var pos = ecs.getPosition(entityId); // Safe
+  });
+});
 ```

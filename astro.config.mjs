@@ -107,13 +107,27 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', slug: 'simplescripting/overview' },
 						{ label: 'Introduction', slug: 'simplescripting/introduction' },
-						{ label: 'FAQ', slug: 'simplescripting/faq' },
 						{
 							label: 'Getting Started',
 							collapsed: false,
 							items: [
+								{ label: 'Learning Path', slug: 'simplescripting/getting-started/learning-path' },
 								{ label: 'Installation', slug: 'simplescripting/getting-started/installation' },
 								{ label: 'Folder Structure', slug: 'simplescripting/getting-started/folder-structure' },							{ label: 'FAQ', slug: 'simplescripting/getting-started/faq' },							]
+						},
+						{
+							label: 'Tutorials',
+							collapsed: false,
+							items: [
+								{ label: 'Your First Mod', slug: 'simplescripting/tutorials/your-first-mod' },
+							]
+						},
+						{
+							label: 'Examples',
+							collapsed: false,
+							items: [
+								{ label: 'Example Mods Overview', slug: 'simplescripting/examples/overview' },
+							]
 						},
 						{
 							label: 'Mod Development',
@@ -131,12 +145,14 @@ export default defineConfig({
 							items: [
 								{ label: 'API Overview', slug: 'simplescripting/api/overview' },
 								{ label: 'Events & Commands', slug: 'simplescripting/api/events-and-commands' },
+								{ label: 'Inventory & Items', slug: 'simplescripting/api/inventory-and-items' },
 								{ label: 'Players & Worlds', slug: 'simplescripting/api/players-and-worlds' },
 								{ label: 'Server, Net & Assets', slug: 'simplescripting/api/server-net-and-assets' },
 								{ label: 'UI & Messages', slug: 'simplescripting/api/ui-and-messages' },
 								{ label: 'Modules & Shared Services', slug: 'simplescripting/api/modules-and-shared-services' },
 								{ label: 'Database', slug: 'simplescripting/api/database' },
-								{ label: 'Economy', slug: 'simplescripting/api/economy' },
+								{ label: 'Extensions', slug: 'simplescripting/api/extensions' },
+								{ label: 'Economy (Extension)', slug: 'simplescripting/api/economy' },
 							],
 						},
 						{
@@ -158,7 +174,8 @@ export default defineConfig({
 								{ label: 'Shared Services', slug: 'simplescripting/interop/shared-services' },
 							]
 						},
-						{ label: 'limitations', slug: 'simplescripting/limitations' },
+						{ label: 'FAQ', slug: 'simplescripting/faq' },
+						{ label: 'Limitations', slug: 'simplescripting/limitations' },
 					]
 				}
 			],
