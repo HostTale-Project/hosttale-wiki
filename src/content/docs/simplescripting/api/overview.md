@@ -24,19 +24,21 @@ Each wrapper sits on top of a native system:
 - `require` → module loader for `.js` files inside a mod
 - `SharedServices` → cross-mod API bridge
 - `db` → SQLite database per mod under the SimpleScripting data folder
-- `economy` → unified economy API supporting VaultUnlocked and EliteEssentials
+- `inventory` → ItemStack creation, ItemContainerHandle for managing inventories
+- `economy` → **Extension API** (requires EconomySS plugin) - unified economy interface for VaultUnlocked/EliteEssentials
 
 ## Reading the API docs
 
 Each API page lists the wrapper methods, their native counterpart, and usage examples:
 
 - [Events & Commands](./events-and-commands)
+- [Inventory & Items](./inventory-and-items)
 - [Players & Worlds](./players-and-worlds)
 - [Server, Net & Assets](./server-net-and-assets)
 - [UI & Messages](./ui-and-messages)
 - [Modules & Shared Services](./modules-and-shared-services)
 - [Database](./database)
-- [Economy](./economy)
+- [Economy (Extension)](./economy)
 - [Example Packs](./examples)
 
 You can mix these surfaces freely within a mod. All messaging methods accept plain strings or the `ui` builders documented below.

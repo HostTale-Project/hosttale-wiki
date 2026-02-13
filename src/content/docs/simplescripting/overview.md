@@ -66,6 +66,7 @@ Ready to start building JavaScript mods?
 
 - [JavaScript API Overview](/simplescripting/api/overview) - Complete API reference
 - [Events & Commands](/simplescripting/api/events-and-commands) - Handle game events and create commands
+- [Inventory & Items](/simplescripting/api/inventory-and-items) - ItemStack APIs and planned inventory management
 - [Database API](/simplescripting/api/database) - Persist data with SQLite
 - [ECS for SimpleScripting](/simplescripting/ecs/overview) - Work with the Entity Component System
 - [Current Limitations](/simplescripting/limitations) - Understand design constraints

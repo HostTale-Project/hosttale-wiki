@@ -60,10 +60,10 @@ See [API Overview](/simplescripting/api/overview) for the complete surface.
 ### What can't I do with SimpleScripting?
 
 SimpleScripting cannot:
-- ❌ Define custom blocks, items, or models (use native mods for assets)
-- ❌ Run client-side code (server-only)
-- ❌ Access low-level Java APIs directly
-- ❌ Modify core game mechanics without native mod support
+- Not supported: Define custom blocks, items, or models (use native mods for assets)
+- Not supported: Run client-side code (server-only)
+- Not supported: Access low-level Java APIs directly
+- Not supported: Modify core game mechanics without native mod support
 
 See [Current Limitations](/simplescripting/limitations) for details.
 
